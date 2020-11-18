@@ -53,6 +53,12 @@ for i in range(len(item_list)):
     title_list_author.append(temp_author)
 print(len(title_list_author))
 
+title_list_isbn = []
+for i in range(len(item_list)):
+    temp_isbn = item_list[i]['isbn13']
+    title_list_isbn.append(temp_isbn)
+print(len(title_list_isbn))
+
 
 #url 정의 및 reqeust와 response
 url_2 = f"http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey={key}&QueryType=Bestseller&MaxResults=100" \
@@ -100,6 +106,10 @@ for i in range(len(item_list)):
     title_list_author.append(temp_author)
 print(len(title_list_author))
 
+for i in range(len(item_list)):
+    temp_isbn = item_list[i]['isbn13']
+    title_list_isbn.append(temp_isbn)
+print(len(title_list_isbn))
 
 with open("./data/book_list_title.txt", "wb") as fp:   #Pickling
     pickle.dump(title_list_title, fp)
@@ -112,3 +122,6 @@ with open("./data/book_list_img.txt", "wb") as fp:   #Pickling
 
 with open("./data/book_list_author.txt", "wb") as fp:   #Pickling
     pickle.dump(title_list_author, fp)
+
+with open("./data/book_list_isbn.txt", "wb") as fp:   #Pickling
+    pickle.dump(title_list_isbn, fp)

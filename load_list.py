@@ -1,5 +1,10 @@
 import pickle
 
+with open("./data/naver_url.txt", "rb") as fp:   # Unpickling
+    nvaer_url_list = pickle.load(fp)
+    print(nvaer_url_list)
+    print(len(nvaer_url_list))
+
 with open("./data/book_list_author.txt", "rb") as fp:   # Unpickling
     author_list = pickle.load(fp)
     print(author_list)
