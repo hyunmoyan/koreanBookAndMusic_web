@@ -3,13 +3,13 @@ import pickle
 with open("./data/book_list_author.txt", "rb") as fp:   # Unpickling
     author_list = pickle.load(fp)
     print(author_list)
-    print(type(author_list))
+    print(len(author_list))
 
 
 with open("./data/book_list_img.txt", "rb") as fp:   # Unpickling
     img_list = pickle.load(fp)
     print(img_list)
-    print(type(img_list))
+    print(len(img_list))
 
 
 with open("./data/book_list_title.txt", "rb") as fp:   # Unpickling
