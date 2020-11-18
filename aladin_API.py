@@ -23,14 +23,46 @@ print(response_json)
 
 item_list = response_json['item']
 
-title_list = []
+print(item_list)
+
+
+
+
+
+title_list_title = []
 for i in range(len(item_list)):
-    temp = item_list[i]['title']
-    title_list.append(temp)
-print(len(title_list))
+    temp_title = item_list[i]['title']
+    title_list_title.append(temp_title)
+print(len(title_list_title))
+
+title_list_url = []
+for i in range(len(item_list)):
+    temp_url = item_list[i]['link']
+    title_list_url.append(temp_url)
+print(len(title_list_url))
+
+title_list_img = []
+for i in range(len(item_list)):
+    temp_img = item_list[i]['cover']
+    title_list_img.append(temp_img)
+print(len(title_list_img))
+
+title_list_author = []
+for i in range(len(item_list)):
+    temp_author = item_list[i]['author']
+    title_list_author.append(temp_author)
+print(len(title_list_author))
 
 
-with open("./data/book_list1.txt", "wb") as fp:   #Pickling
-    pickle.dump(title_list, fp)
 
+with open("./data/book_list_title.txt", "wb") as fp:   #Pickling
+    pickle.dump(title_list_title, fp)
 
+with open("./data/book_list_url.txt", "wb") as fp:   #Pickling
+    pickle.dump(title_list_url, fp)
+
+with open("./data/book_list_img.txt", "wb") as fp:   #Pickling
+    pickle.dump(title_list_img, fp)
+
+with open("./data/book_list_author.txt", "wb") as fp:   #Pickling
+    pickle.dump(title_list_author, fp)

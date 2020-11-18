@@ -2,3 +2,8 @@
 venv/Lib/site-packages/numpy/__pycache__/version.cpython-38.pyc
 venv/
 key/
+.idea/vcs.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/koreanBookAndMusic_web.iml
