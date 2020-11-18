@@ -9,7 +9,7 @@ with open("./key/key.txt", "rb") as fp:   # Unpickling
     key = pickle.load(fp)
 
 #url 정의 및 reqeust와 response
-url = f"http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey={key}&QueryType=ItemNewSpecial&MaxResults=100" \
+url = f"http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey={key}&QueryType=Bestseller&MaxResults=100" \
       "&start=1&SearchTarget=Book&output=js&Version=20131101&CategoryId=50993"
 
 response = requests.get(url)
